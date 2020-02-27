@@ -7,8 +7,10 @@ export default class MainScene extends Phaser.Scene {
     super({ key: 'MainScene' });
   }
 
+ 
   create() {
-    this.exampleObject = new ExampleObject(this, 0, 0);
+    this.exampleObject = new ExampleObject(this, 50, 50);
+    this.scene.start("TobyScene");
   }
 
   update() {

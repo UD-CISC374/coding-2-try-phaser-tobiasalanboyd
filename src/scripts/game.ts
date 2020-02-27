@@ -2,13 +2,14 @@ import 'phaser';
 import MainScene from './scenes/mainScene';
 import PreloadScene from './scenes/preloadScene';
 import GameConfig = Phaser.Types.Core.GameConfig;
+import TobyScene from './scenes/tobyScene';
 
 const DEFAULT_WIDTH = 400;
 const DEFAULT_HEIGHT = 400;
 
 
 const config: GameConfig = {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#0fe3df',
     scale: {
         parent: 'phaser-game',
         mode: Phaser.Scale.FIT,
@@ -16,7 +17,7 @@ const config: GameConfig = {
         width: DEFAULT_WIDTH,
         height: DEFAULT_HEIGHT
     },
-    scene: [PreloadScene, MainScene],
+    scene: [PreloadScene, MainScene, TobyScene],
     physics: {
         default: 'arcade',
         arcade: {
