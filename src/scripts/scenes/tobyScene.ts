@@ -205,7 +205,7 @@ export default class TobyScene extends Phaser.Scene {
     powerUp.disableBody(true,true);
     this.pcount+=1;
     console.log("Score is: "+this.pcount);//TODO: make the score work!
-    //this.scoretext.setText("Crickets: " + this.pcount);
+    this.scoretext.setText("Crickets: " + this.pcount);
   }
 
   
