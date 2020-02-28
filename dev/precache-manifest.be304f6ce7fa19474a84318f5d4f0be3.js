@@ -52,15 +52,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-tobiasalanboyd/devassets/tutorial_images/ship3.png"
   },
   {
-    "revision": "9be4e6c165ac9bb9f3ef",
-    "url": "/coding-2-try-phaser-tobiasalanboyd/devgen.main.abde1ddf0b28e0936293.bundle.js"
+    "revision": "95d0ab0714e1baee045a",
+    "url": "/coding-2-try-phaser-tobiasalanboyd/devgen.main.b3ac97eea553d9ec12bc.bundle.js"
   },
   {
     "revision": "324f31435cec3151a5ed",
     "url": "/coding-2-try-phaser-tobiasalanboyd/devgen.vendors.a1a6c04959c089cbf1e5.bundle.js"
   },
   {
-    "revision": "f9ba99e90b3b8c82e447a36dffa79807",
+    "revision": "23cb33e65473851db8e6c233494c9319",
     "url": "/coding-2-try-phaser-tobiasalanboyd/devindex.html"
   },
   {
