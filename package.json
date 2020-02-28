@@ -2,7 +2,7 @@
   "name": "coding-2-try-phaser-tobiasalanboyd",
   "version": "0.0.1",
   "description": "Phaser 3 starter template for educational games, using TypeScript, webpack, and Github Pages.",
-  "homepage": "https://github.com/acbart/educational-phaser-game-template#readme",
+  "homepage": "https://github.com/UD-CISC374/coding-2-try-phaser-tobiasalanboyd",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
@@ -27,11 +27,11 @@
   ],
   "author": {
     "name": "Toby",
-    "url": "https://github.com/acbart"
+    "url": "https://github.com/tobiasalanboyd"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/acbart/educational-phaser-game-template.git"
+    "url": "https://github.com/UD-CISC374/coding-2-try-phaser-tobiasalanboyd.git"
   },
   "template": {
     "name": "educational-phaser-game-template",

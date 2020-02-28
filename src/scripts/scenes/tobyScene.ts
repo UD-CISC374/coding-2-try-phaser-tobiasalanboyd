@@ -220,8 +220,8 @@ export default class TobyScene extends Phaser.Scene {
     if(Phaser.Input.Keyboard.JustDown(this.spacebar)){
         this.shootBeam();
     }
-    for (var i = 0; i < this.projectiles.getChildren().length; i++) {
-        var beam = this.projectiles.getChildren()[i];
+    for (let i = 0; i < this.projectiles.getChildren().length; i++) {
+        let beam = this.projectiles.getChildren()[i];
         beam.update();
       }
   }
