@@ -23,35 +23,35 @@ export default class TobyScene extends Phaser.Scene {
 
   preload(){
       
-    this.load.image("background", "assets/tutorial_images/background.png");
+    this.load.image("background", "assets/spritesheets/lizzybg.png");
     /*this.load.image("ship", "assets/tutorial_images/ship.png");
     this.load.image("ship2", "assets/tutorial_images/ship2.png");
     this.load.image("ship3", "assets/tutorial_images/ship3.png");*/
-    this.load.spritesheet("ship", "assets/spritesheets/ship.png",{
+    this.load.spritesheet("ship", "assets/spritesheets/enemy1.png",{
         frameWidth: 16,
         frameHeight: 16
       });
-      this.load.spritesheet("ship2", "assets/spritesheets/ship2.png",{
-        frameWidth: 32,
-        frameHeight: 16
-      });
-      this.load.spritesheet("ship3", "assets/spritesheets/ship3.png",{
-        frameWidth: 32,
+      this.load.spritesheet("ship2", "assets/spritesheets/tsuchi.png",{
+        frameWidth: 4,
         frameHeight: 32
+      });
+      this.load.spritesheet("ship3", "assets/spritesheets/tsuchibig.png",{
+        frameWidth: 12,
+        frameHeight: 96
       });
       this.load.spritesheet("explosion", "assets/spritesheets/explosion.png",{
         frameWidth: 16,
         frameHeight: 16
       });
-      this.load.spritesheet("power-up", "assets/spritesheets/power-up.png",{
+      this.load.spritesheet("power-up", "assets/spritesheets/cricket.png",{
         frameWidth: 16,
         frameHeight: 16
       });
-      this.load.spritesheet("player", "assets/spritesheets/player.png",{
-        frameWidth: 16,
+      this.load.spritesheet("player", "assets/spritesheets/lizplayer.png",{
+        frameWidth: 7,
         frameHeight: 24
       });
-      this.load.spritesheet("beam", "assets/spritesheets/beam.png",{
+      this.load.spritesheet("beam", "assets/spritesheets/lizbeam.png",{
         frameWidth: 16,
         frameHeight: 16
       });
@@ -85,13 +85,13 @@ export default class TobyScene extends Phaser.Scene {
       });
       this.anims.create({
         key: "ship2_anim",
-        frames: this.anims.generateFrameNumbers("ship2",{ start: 0, end: 1 }),
+        frames: this.anims.generateFrameNumbers("ship2",{ start: 0, end: 3 }),
         frameRate: 20,
         repeat: -1
       });
       this.anims.create({
         key: "ship3_anim",
-        frames: this.anims.generateFrameNumbers("ship3",{ start: 0, end: 1 }),
+        frames: this.anims.generateFrameNumbers("ship3",{ start: 0, end: 3 }),
         frameRate: 20,
         repeat: -1
       });
@@ -186,19 +186,19 @@ export default class TobyScene extends Phaser.Scene {
     /*this.physics.add.collider(this.projectiles, this.powerUps, function(projectile, powerUp){
         projectile.destroy;
     });*/
-    this.physics.add.overlap(this.player, this.powerUps, this.pickPowerUp);
+    this.physics.add.overlap(this.player, this.powerUps, this.pickPowerUp, undefined, this);
 
     this.enemies = this.physics.add.group();
     this.enemies.add(this.ship1);
     this.enemies.add(this.ship2);
     this.enemies.add(this.ship3);
-    this.physics.add.overlap(this.player, this.enemies, this.hurtPlayer);
-    this.physics.add.overlap(this.projectiles, this.enemies, this.hurtEnemy);
+    this.physics.add.overlap(this.player, this.enemies, this.hurtPlayer, undefined, this);
+    this.physics.add.overlap(this.projectiles, this.enemies, this.hurtEnemy, undefined, this);
   }
   
   hurtPlayer(player, enemy){
       console.log("This should end the game.");
-    //this.scene.start("EndScene");
+    this.scene.start("EndScene");
   }
 
   pickPowerUp(player, powerUp){
